@@ -1,0 +1,167 @@
+Develop By GOOGLE
+
+First Release 14 sep 2016
+
+Angular Intro: -
+
+Angular ("Angular 2.0 +") is open source web application fremwork led by 
+the Angular team at GOOGLE.
+
+Angular is total different from Angular js
+Angular rewrite Angular js.
+Angular has MVC based architecture for web Development.
+ M=modul
+ V=view
+ c =controller
+
+We can use with NPM and Without NPM but 90 % Developer use NPM.
+
+so 
+Install Angular CLI:
+-------------------
+npm i @angular/cli
+
+check Version of Angular:
+-------------------------
+  ng v
+
+Make a project:
+---------------
+ng new projectName
+
+cd projectName after that npm ng serve
+
+** Angular Live Development Server is listening on localhost:4200, 
+open your browser on http://localhost:4200/ **
+
+
+Folder Structure :
+===============
+
+package json file:- sabse pahli file banti hai
+
+all dependencies and script and other file
+
+src: 
+====
+All Work in this file will happen
+
+Environment:
+============
+Which api use for production ,Testing and  Development 
+
+assest:
+-------
+all Public File like image icon font etc
+
+main.js:
+==========
+
+Javascript File for intract html file
+
+app:
+====
+
+root Component of project
+
+Module:
+=======
+collection of Component.
+like login Sign
+
+editorconfing:-
+==============
+all about Editor.
+
+karma.config:
+============
+For unit Testing.
+
+package-lock json :
+---------------
+
+It have all dependencies packagees.
+
+tslint
+
+
+
+Angular InterPolation:
+----------------------
+
+kuch bhi data jo aap Component.ts file se Component.html file me le jana chahte ho uske liye 
+inter pollation use hota hai
+
+Components:
+==========
+It is peace of code 
+write Once and  use multiple time like function
+
+but it have 4 files
+
+agar hum koi bhi Component banate hai to use root Component me add karna hota hai
+
+@Component({
+  selector: 'component Name',
+  templateUrl: Html file Url  './app.component.html',
+  styleUrls: CSS file Url['./app.component.css']
+})
+Create a Component:
+===================
+ng g c componentName
+
+
+
+Module:
+======
+collection of Component directories, pipes and sevices that are related each other
+
+src/app/ app.module.js
+
+Always component are declare and module are imported
+
+
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { UserListComponent } from './user-list/user-list.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    UserListComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+
+Create a Module:
+===================
+ng g m moduleName
+
+agar kisi module ke ander component ko user karna chahte ho total
+sabse pahle us component ke module.ts file se usko export karna hota hai
+
+uske bad jha use karna hai use module.ts file me jake import karte hai
+
+
+Call a Function in Angular js:
+=============================
+ getAge(age:Number)
+  {
+    alert(age)
+  }
+
+
+<button (click)="getAge(23)">getAge</button>
+
+Events in Angular:
+=================
