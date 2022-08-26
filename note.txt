@@ -29,7 +29,7 @@ Make a project:
 ---------------
 ng new projectName
 
-cd projectName after that npm ng serve
+cd projectName after that npm run start
 
 ** Angular Live Development Server is listening on localhost:4200, 
 open your browser on http://localhost:4200/ **
@@ -91,6 +91,42 @@ Angular InterPolation:
 
 kuch bhi data jo aap Component.ts file se Component.html file me le jana chahte ho uske liye 
 inter pollation use hota hai
+ 
+ function call :
+ getname(){
+
+    return "ShivpalYadav"
+  }
+
+  {{getname()}}
+
+  but :
+
+  component ke ander kisi variable ko define nahi kar sakte
+  lekin function ke variable ko define kar sakte hai
+
+
+  
+
+    getname(){
+      var name="ShivpalYadav"
+      return name;
+    }
+
+ object:-
+ =======
+ 
+  address={
+         city:"lucknow",
+         pincode:226021
+  }
+  Array:
+  ==========
+  arr=['maruti','suzuki']
+
+  current Location:
+
+
 
 Components:
 ==========
@@ -163,5 +199,31 @@ Call a Function in Angular js:
 
 <button (click)="getAge(23)">getAge</button>
 
-Events in Angular:
-=================
+  hello='Calling function from other side';
+  getname(para:any)
+   {
+    alert(para);
+   }
+    <button (click)="getname(hello)">click</button> 
+
+   anEvent(inp:any){
+    alert(inp);
+   }
+
+   <input type="text" #sp (keyup.enter)="anEvent(sp.value)">
+
+  Property Binding
+===================
+
+Property Binding is a one way machnism that lets you set the property of a view
+element.it involves updating the value of a property in the component and  Binding it to 
+a element in the view templte.
+Property Binding uses the [ ] syntax for data Binding
+
+type of Property Binding:
+----------------------------
+
+1. Component 
+2. Element
+3. Directive
+
